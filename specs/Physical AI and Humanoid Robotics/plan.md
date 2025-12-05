@@ -11,14 +11,14 @@ The goal is to bridge digital AI with physical humanoid robots using ROS 2, Gaze
 
 ## Technical Context
 
-**Language/Version**: Python (for rclpy, general AI/Robotics, LLM integration) - NEEDS CLARIFICATION on specific Python version (e.g., 3.9, 3.10)
-**Primary Dependencies**: ROS 2, Gazebo, Unity, NVIDIA Isaac Sim, Isaac ROS, Nav2, OpenAI Whisper. - NEEDS CLARIFICATION on specific versions for each.
-**Storage**: N/A (for the book content itself). For simulation assets/configurations/robot states, NEEDS CLARIFICATION if persistent storage beyond local files is needed (e.g., cloud storage for large datasets).
-**Testing**: Simulation-based validation within Gazebo and Isaac Sim; code example testing within ROS 2 environment. - NEEDS CLARIFICATION on specific testing frameworks (e.g., pytest for Python code).
-**Target Platform**: Development and simulation primarily on Linux systems (for ROS 2, Gazebo, Isaac ROS); Unity development on Windows/Linux; Book deployment to GitHub Pages.
+**Language/Version**: Python 3.11 (for rclpy, general AI/Robotics, LLM integration)
+**Primary Dependencies**: ROS 2 Kilted Kaiju, Gazebo Harmonic, Unity 6.0/6.1, NVIDIA Isaac Sim 4.5.0/5.0, Isaac ROS 4.0.0, Nav2 1.4.0, OpenAI Whisper (gpt-4o-transcribe / 20250625 library version).
+**Storage**: Hybrid approach (specialized databases like ReductStore, cloud robotics platforms like FogROS2/Rapyuta Robotics, integrated version control within digital twin environments like NVIDIA Omniverse/Isaac Sim, MongoDB/SQLite for robot states).
+**Testing**: Pytest for Python/ROS 2 code; NVIDIA Omniverse/Isaac for high-fidelity simulation validation (digital twin creation, AI-driven design automation).
+**Target Platform**: Primarily Linux systems for development/simulation (ROS 2, Gazebo, Isaac ROS); Windows/Linux for Unity development; Book deployment to GitHub Pages. Physical robot deployment targets (e.g., NVIDIA Jetson Thor, Isaac GR00T) are acknowledged for context but not primary focus of book exercises.
 **Project Type**: Educational book content generation, with integrated code examples and simulation setup instructions. Structured as a Docusaurus project.
-**Performance Goals**: For simulations: real-time performance where feasible; specific frame rates for visual perception (e.g., 30 FPS for Isaac Sim). - NEEDS CLARIFICATION on specific metrics for each simulation environment.
-**Constraints**: Computationally heavy, requiring robust hardware for effective simulation and AI model training (as noted in hardware_requirements of spec.md). Content must be beginner-friendly yet technically accurate.
+**Performance Goals**: Real-time, high-fidelity simulation; high frame rates for visual perception (e.g., 30+ FPS for Isaac Sim), sufficient simulation step rates for realistic physics. Performance related to synthetic data generation efficiency and fidelity of simulated environment.
+**Constraints**: Computationally heavy, requiring high-end GPUs (NVIDIA RTX series, A6000), multi-core CPUs (Intel i7/Ryzen 5 equivalent or better), and ample RAM (16GB-32GB+). Content must be beginner-friendly yet technically accurate.
 **Scale/Scope**: Four distinct modules plus a comprehensive capstone project; total content equivalent to a full-length educational textbook; target audience includes beginners to advanced AI/robotics learners.
 
 ## Constitution Check
