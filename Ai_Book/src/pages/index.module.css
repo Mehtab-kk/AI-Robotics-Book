@@ -125,7 +125,7 @@
 /* Top right button container */
 .topRightButton {
   position: absolute;
-  top: 2rem;
+  top: 6rem;
   right: 2rem;
   z-index: 4;
 }
@@ -153,8 +153,8 @@
   }
 
   .bookLogo {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
   }
 
   .roboticLogo {
