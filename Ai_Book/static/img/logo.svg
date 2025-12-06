@@ -1,0 +1,68 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .robot-head {
+        animation: headBob 3s ease-in-out infinite;
+      }
+      .robot-eye {
+        animation: eyeBlink 4s ease-in-out infinite;
+      }
+      .robot-antenna {
+        animation: antennaWiggle 5s ease-in-out infinite;
+      }
+      .robot-body {
+        animation: bodyPulse 4s ease-in-out infinite alternate;
+      }
+
+      @keyframes headBob {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+      }
+      @keyframes eyeBlink {
+        0%, 45%, 55%, 100% { opacity: 1; }
+        47%, 53% { opacity: 0; }
+      }
+      @keyframes antennaWiggle {
+        0%, 100% { transform: rotate(0deg); }
+        25% { transform: rotate(5deg); }
+        75% { transform: rotate(-5deg); }
+      }
+      @keyframes bodyPulse {
+        0% { fill: #3498db; }
+        100% { fill: #2980b9; }
+      }
+    </style>
+  </defs>
+
+  <!-- Robot Body -->
+  <rect x="60" y="80" width="80" height="80" rx="10" class="robot-body" fill="#3498db" stroke="#2c3e50" stroke-width="2"/>
+
+  <!-- Robot Head -->
+  <g class="robot-head" transform="translate(0, -10)">
+    <rect x="70" y="50" width="60" height="50" rx="8" fill="#ecf0f1" stroke="#2c3e50" stroke-width="2"/>
+
+    <!-- Eyes -->
+    <circle cx="85" cy="70" r="5" class="robot-eye" fill="#2ecc71"/>
+    <circle cx="115" cy="70" r="5" class="robot-eye" fill="#2ecc71"/>
+
+    <!-- Antenna -->
+    <line x1="100" y1="45" x2="100" y2="30" class="robot-antenna" stroke="#2c3e50" stroke-width="2"/>
+    <circle cx="100" cy="25" r="4" fill="#e74c3c"/>
+  </g>
+
+  <!-- Arms -->
+  <line x1="60" y1="100" x2="40" y2="120" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+  <line x1="140" y1="100" x2="160" y2="120" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Legs -->
+  <line x1="80" y1="160" x2="80" y2="180" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+  <line x1="120" y1="160" x2="120" y2="180" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- AI Chip Icon -->
+  <rect x="85" y="115" width="30" height="20" rx="2" fill="#9b59b6" opacity="0.8"/>
+  <circle cx="95" cy="125" r="2" fill="#ecf0f1"/>
+  <circle cx="105" cy="125" r="2" fill="#ecf0f1"/>
+
+  <!-- Shadow -->
+  <ellipse cx="100" cy="185" rx="50" ry="5" fill="rgba(0,0,0,0.1)" opacity="0.3"/>
+</svg>
