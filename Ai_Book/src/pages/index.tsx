@@ -1,128 +1,110 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import React from 'react';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
+import Link from '@docusaurus/Link';
+import './index.css';
 
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+export default function Home() {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      {/* Holographic UI elements */}
-      <div className={styles.holographicElement}></div>
-      <div className={styles.holographicElement}></div>
-      <div className={styles.holographicElement}></div>
-      <div className={styles.holographicElement}></div>
+    <Layout>
+      <main className="heroContainer">
+        {/* Holographic particles */}
+        <div className="particle particle-1"></div>
+        <div className="particle particle-2"></div>
+        <div className="particle particle-3"></div>
+        <div className="particle particle-4"></div>
+        <div className="particle particle-5"></div>
 
-      {/* Robotic logo at the top center */}
-      <div className={styles.roboticLogo}>
-        <svg
-          viewBox="0 0 100 100"
-          width="40"
-          height="40"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-              <feDropShadow dx="2" dy="2" stdDeviation="3" floodColor="rgba(0,0,0,0.3)" />
-            </filter>
-          </defs>
-          <g filter="url(#shadow)">
-            <rect x="25" y="30" width="50" height="40" rx="8" fill="#4a90e2" />
-            <rect x="30" y="35" width="40" height="30" rx="5" fill="#5fa8f0" />
-            <circle cx="40" cy="45" r="3" fill="#2ecc71" />
-            <circle cx="60" cy="45" r="3" fill="#2ecc71" />
-            <rect x="45" y="55" width="10" height="15" rx="2" fill="#9b59b6" />
-          </g>
-        </svg>
-      </div>
+        {/* Holographic grid lines */}
+        <div className="holographic-grid"></div>
 
-      <div className="container">
-        <div className={styles.heroContent}>
-          {/* Top right button */}
-          <div className={styles.topRightButton}>
-            <Link
-              className="button button--secondary button--lg"
-              to="/docs/module-1-ros2-nervous-system/chapter-1-introduction-to-ros2">
-              Start Reading
-            </Link>
-          </div>
-
-          <div className={styles.logoContainer}>
-            <div className={styles.logoAnimation}>
-              <svg
-                className={styles.bookLogo}
-                viewBox="0 0 200 200"
-                width="200"
-                height="200"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+        <div className="content-layout">
+          <div className="robot-section">
+            {/* Main robot */}
+            <div className="main-robot">
+              <svg width="180" height="220" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-                  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-                    <feDropShadow dx="4" dy="4" stdDeviation="6" floodColor="rgba(0,0,0,0.4)" />
-                  </filter>
+                  {/* Gradient for robot body */}
+                  <linearGradient id="robotGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#3498db" />
+                    <stop offset="50%" stopColor="#1abc9c" />
+                    <stop offset="100%" stopColor="#2ecc71" />
+                  </linearGradient>
+
+                  {/* Gradient for glow effect */}
+                  <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stopColor="#1abc9c" stopOpacity="0.8" />
+                    <stop offset="100%" stopColor="#3498db" stopOpacity="0" />
+                  </radialGradient>
+
+                  {/* Animated gradient for text */}
+                  <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#3498db">
+                      <animate attributeName="offset" values="0;1;0" dur="4s" repeatCount="indefinite" />
+                    </stop>
+                    <stop offset="50%" stopColor="#9b59b6">
+                      <animate attributeName="offset" values="0.25;0.75;0.25" dur="4s" repeatCount="indefinite" />
+                    </stop>
+                    <stop offset="100%" stopColor="#1abc9c">
+                      <animate attributeName="offset" values="0.5;1.5;0.5" dur="4s" repeatCount="indefinite" />
+                    </stop>
+                  </linearGradient>
                 </defs>
-                <g filter="url(#shadow)">
-                  {/* Robot Body */}
-                  <rect x="60" y="80" width="80" height="80" rx="10" fill="#3498db" stroke="#2c3e50" stroke-width="2"/>
 
-                  {/* Robot Head */}
-                  <g transform="translate(0, -10)">
-                    <rect x="70" y="50" width="60" height="50" rx="8" fill="#ecf0f1" stroke="#2c3e50" stroke-width="2"/>
+                {/* Glow effect behind robot */}
+                <circle cx="100" cy="120" r="120" fill="url(#glowGradient)" className="robot-glow" />
 
-                    {/* Eyes */}
-                    <circle cx="85" cy="70" r="5" fill="#2ecc71"/>
-                    <circle cx="115" cy="70" r="5" fill="#2ecc71"/>
+                {/* Robot Head */}
+                <rect x="70" y="60" width="60" height="40" rx="10" fill="url(#robotGradient)" stroke="#2c3e50" strokeWidth="2" className="robot-head"/>
+                {/* Head details */}
+                <rect x="75" y="65" width="50" height="30" rx="8" fill="rgba(255,255,255,0.2)" stroke="#2c3e50" strokeWidth="1"/>
 
-                    {/* Antenna */}
-                    <line x1="100" y1="45" x2="100" y2="30" stroke="#2c3e50" stroke-width="2"/>
-                    <circle cx="100" cy="25" r="4" fill="#e74c3c"/>
-                  </g>
+                {/* Eyes */}
+                <circle cx="85" cy="80" r="6" fill="#2ecc71" className="robot-eye">
+                  <animate attributeName="opacity" values="1;0.3;1" dur="4s" repeatCount="indefinite" begin="0s" />
+                </circle>
+                <circle cx="115" cy="80" r="6" fill="#2ecc71" className="robot-eye">
+                  <animate attributeName="opacity" values="1;0.3;1" dur="4s" repeatCount="indefinite" begin="0.5s" />
+                </circle>
 
-                  {/* Arms */}
-                  <line x1="60" y1="100" x2="40" y2="120" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
-                  <line x1="140" y1="100" x2="160" y2="120" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+                {/* AI Node Symbol on forehead */}
+                <circle cx="100" cy="70" r="8" fill="#9b59b6" opacity="0.8" className="ai-node"/>
+                <circle cx="96" cy="67" r="1.5" fill="#ecf0f1"/>
+                <circle cx="100" cy="67" r="1.5" fill="#ecf0f1"/>
+                <circle cx="104" cy="67" r="1.5" fill="#ecf0f1"/>
 
-                  {/* Legs */}
-                  <line x1="80" y1="160" x2="80" y2="180" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
-                  <line x1="120" y1="160" x2="120" y2="180" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+                {/* Robot Body */}
+                <rect x="65" y="100" width="70" height="80" rx="12" fill="url(#robotGradient)" stroke="#2c3e50" strokeWidth="2" className="robot-body"/>
+                {/* Body details */}
+                <rect x="70" y="105" width="60" height="70" rx="8" fill="rgba(0,0,0,0.1)" stroke="#2c3e50" strokeWidth="1"/>
 
-                  {/* AI Chip Icon */}
-                  <rect x="85" y="115" width="30" height="20" rx="2" fill="#9b59b6" opacity="0.8"/>
-                  <circle cx="95" cy="125" r="2" fill="#ecf0f1"/>
-                  <circle cx="105" cy="125" r="2" fill="#ecf0f1"/>
+                {/* Chest Circuit Pattern */}
+                <rect x="85" y="120" width="30" height="20" rx="4" fill="#9b59b6" opacity="0.6"/>
+                <circle cx="90" cy="125" r="1.5" fill="#ecf0f1"/>
+                <circle cx="95" cy="125" r="1.5" fill="#ecf0f1"/>
+                <circle cx="100" cy="125" r="1.5" fill="#ecf0f1"/>
+                <circle cx="105" cy="125" r="1.5" fill="#ecf0f1"/>
 
-                  {/* Shadow */}
-                  <ellipse cx="100" cy="185" rx="50" ry="5" fill="rgba(0,0,0,0.1)" opacity="0.3"/>
-                </g>
+                {/* Arms */}
+                <line x1="65" y1="120" x2="35" y2="140" stroke="url(#robotGradient)" strokeWidth="8" strokeLinecap="round" className="robot-arm"/>
+                <line x1="135" y1="120" x2="165" y2="140" stroke="url(#robotGradient)" strokeWidth="8" strokeLinecap="round" className="robot-arm"/>
+
+                {/* Legs */}
+                <line x1="85" y1="180" x2="85" y2="210" stroke="url(#robotGradient)" strokeWidth="8" strokeLinecap="round" className="robot-leg leg-left"/>
+                <line x1="115" y1="180" x2="115" y2="210" stroke="url(#robotGradient)" strokeWidth="8" strokeLinecap="round" className="robot-leg leg-right"/>
               </svg>
             </div>
           </div>
-          <Heading as="h1" className={clsx('hero__title', styles.animatedTitle)}>
-            {siteConfig.title}
-          </Heading>
-          <p className={clsx('hero__subtitle', styles.animatedSubtitle)}>
-            {siteConfig.tagline}
-          </p>
-        </div>
-      </div>
-    </header>
-  );
-}
 
-export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      title={`${siteConfig.title}`}
-      description="Learn ROS 2, Simulation, and AI Control for Humanoid Robots">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+          <div className="text-button-section">
+            <h1 className="heroTitle">
+              <span className="gradient-text">Physical AI and Humanoid Robotics</span>
+            </h1>
+
+            <Link className="startButton" to="/docs/module-1-ros2-nervous-system/chapter-1-introduction-to-ros2">
+              Start Reading
+            </Link>
+          </div>
+        </div>
       </main>
     </Layout>
   );
