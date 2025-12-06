@@ -43,13 +43,22 @@ function HomepageHeader() {
 
       <div className="container">
         <div className={styles.heroContent}>
+          {/* Top right button */}
+          <div className={styles.topRightButton}>
+            <Link
+              className="button button--secondary button--lg"
+              to="/docs/module-1-ros2-nervous-system/chapter-1-introduction-to-ros2">
+              Start Reading
+            </Link>
+          </div>
+
           <div className={styles.logoContainer}>
             <div className={styles.logoAnimation}>
               <svg
                 className={styles.bookLogo}
                 viewBox="0 0 200 200"
-                width="150"
-                height="150"
+                width="200"
+                height="200"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <defs>
@@ -99,13 +108,6 @@ function HomepageHeader() {
           <p className={clsx('hero__subtitle', styles.animatedSubtitle)}>
             {siteConfig.tagline}
           </p>
-          <div className={styles.buttons}>
-            <Link
-              className="button button--secondary button--lg"
-              to="/docs/module-1-ros2-nervous-system/chapter-1-introduction-to-ros2">
-              Start Reading
-            </Link>
-          </div>
         </div>
       </div>
     </header>
