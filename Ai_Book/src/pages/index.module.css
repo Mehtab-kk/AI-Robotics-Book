@@ -93,12 +93,12 @@
 /* Robotic logo container */
 .roboticLogo {
   position: absolute;
-  top: 2rem;
+  top: 4rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,45 +122,55 @@
   padding: 0 1rem;
 }
 
-/* Top right button container */
-.topRightButton {
-  position: absolute;
-  top: 6rem;
-  right: 2rem;
-  z-index: 4;
+/* Content row to hold robot and button side by side */
+.contentRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+}
+
+/* Robot logo container */
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.rightButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 @media screen and (max-width: 996px) {
-  .topRightButton {
-    position: relative;
-    top: auto;
-    right: auto;
-    margin-bottom: 1rem;
-    display: flex;
+  .contentRow {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .rightButton {
+    width: 100%;
     justify-content: center;
   }
 
   .heroContent {
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .animatedTitle {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .animatedSubtitle {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .bookLogo {
     width: 200px;
     height: 200px;
-  }
-
-  .roboticLogo {
-    top: 1rem;
-    width: 40px;
-    height: 40px;
   }
 }
 
@@ -168,8 +178,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 3rem;
+  margin-top: 4rem;
 }
 
 .logoContainer {
@@ -180,7 +190,7 @@
 }
 
 .logoAnimation {
-  animation: float 3s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -193,7 +203,7 @@
 }
 
 .bookLogo {
-  animation: pulse 2s infinite;
+  animation: pulse 4s infinite;
 }
 
 @keyframes pulse {
