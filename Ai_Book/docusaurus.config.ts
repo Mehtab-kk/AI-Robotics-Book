@@ -64,6 +64,8 @@ const config: Config = {
       logo: {
         alt: 'Physical AI and Humanoid Robotics Logo',
         src: 'img/logo.svg',
+        href: '/', // Link logo to homepage
+        target: '_self', // Open in same tab
       },
       items: [
         {
