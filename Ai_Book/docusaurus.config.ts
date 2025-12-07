@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Physical AI and Humanoid Robotics',
   tagline: 'Learn ROS 2, Simulation, and AI Control for Humanoid Robots',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.ico', // Changed to reference static/img/favicon.ico
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -18,7 +18,7 @@ const config: Config = {
   url: 'https://mehtab-kk.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/AI-Robotics-Book/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -61,12 +61,6 @@ const config: Config = {
     },
     navbar: {
       title: 'Physical AI & Robotics',
-      logo: {
-        alt: 'Physical AI and Humanoid Robotics Logo',
-        src: 'img/logo.svg',
-        href: '/', // Link logo to homepage
-        target: '_self', // Open in same tab
-      },
       items: [
         {
           type: 'docSidebar',
