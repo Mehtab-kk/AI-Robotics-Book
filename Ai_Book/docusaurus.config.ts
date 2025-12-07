@@ -18,12 +18,12 @@ const config: Config = {
   url: 'https://mehtab-kk.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Physical-AI-Humanoid-Robotics-Book/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Mehtab-kk', // Usually your GitHub org/user name.
-  projectName: 'Physical-AI-Humanoid-Robotics-Book', // Usually your repo name.
+  projectName: 'AI-Robotics-Book', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -44,7 +44,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Mehtab-kk/Physical-AI-Humanoid-Robotics-Book/edit/master/',
+            'https://github.com/Mehtab-kk/AI-Robotics-Book/edit/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -73,7 +73,7 @@ const config: Config = {
           label: 'Book',
         },
         {
-          href: 'https://github.com/Mehtab-kk/Physical-AI-Humanoid-Robotics-Book',
+          href: 'https://github.com/Mehtab-kk/AI-Robotics-Book',
           label: 'GitHub',
           position: 'right',
         },
