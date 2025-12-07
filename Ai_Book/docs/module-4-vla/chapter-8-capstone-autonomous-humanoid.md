@@ -225,4 +225,4 @@ Your autonomous humanoid represents the culmination of advanced robotics concept
 ---
 
 **Previous**: [Chapter 7: Putting It All Together: VLA Stack](./chapter-7-vla-stack-integration.md)
-**Back to**: [Module 4: Vision-Language-Action (VLA)](../module-4-vla)
+**Back to**: [Module 4: Vision-Language-Action (VLA)](./chapter-1-introduction-to-vla.md)
